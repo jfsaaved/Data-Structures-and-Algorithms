@@ -24,7 +24,7 @@ public class Node<AnyType>{
 		this.left = left;
 	}
 	
-	public void setRigth(Node<AnyType> right){
+	public void setRight(Node<AnyType> right){
 		this.right = right;
 	}
 	
