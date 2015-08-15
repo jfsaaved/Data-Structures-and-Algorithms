@@ -1,4 +1,6 @@
-import linkedlist.LinkedList;
+package com.jfsaaved;
+
+import com.jfsaaved.linkedlist.LinkedList;
 
 public class Main {
 

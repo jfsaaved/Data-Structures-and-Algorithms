@@ -1,4 +1,4 @@
-package binarytree;
+package com.jfsaaved.binarytree;
 
 import java.util.*;
 

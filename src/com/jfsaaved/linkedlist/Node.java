@@ -1,4 +1,4 @@
-package linkedlist;
+package com.jfsaaved.linkedlist;
 
 import java.util.*;
 
