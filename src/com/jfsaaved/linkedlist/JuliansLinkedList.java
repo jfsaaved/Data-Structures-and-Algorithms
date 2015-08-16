@@ -21,6 +21,7 @@ public class JuliansLinkedList<AnyType> {
 		size = 0;
 	}
 	
+	// Add functions
 	public void addFirst(AnyType data){
 		head = new Node<AnyType>(data,head);
 		size++;
@@ -59,7 +60,7 @@ public class JuliansLinkedList<AnyType> {
 		
 	}
 	
-	
+	// Getters and Accessors
 	public int getSize(){
 		return size;
 	}
