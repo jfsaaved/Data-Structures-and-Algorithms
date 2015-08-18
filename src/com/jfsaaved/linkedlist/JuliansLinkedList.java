@@ -60,6 +60,54 @@ public class JuliansLinkedList<AnyType> {
 		
 	}
 	
+	public void insertAfter(AnyType afterThis, AnyType addThis){
+		
+		Node<AnyType> tmp = head;
+		while(tmp != null && !tmp.data.equals(afterThis)){
+			tmp = tmp.next;
+		}
+		if(tmp != null){
+			tmp.next = new Node<AnyType>(addThis,tmp.next);
+			size++;
+		}
+		else{
+			System.out.println("Node does not exist");
+		}
+		
+	}
+	
+	// Delete functions
+	public void delete(AnyType deleteThis){
+		
+		if(head == null){
+			System.out.println("Nothing to delete");
+		}
+		else if(head.data.equals(deleteThis)){
+			head = head.next;
+			size--;
+		}
+		else{
+			Node<AnyType> prev = null;
+			Node<AnyType> cur = head;
+			
+			while(cur != null && !cur.data.equals(deleteThis)){
+				prev = cur;
+				cur = cur.next;
+			}
+
+			if(cur != null){
+				prev.next = cur.next;
+				cur = null;
+				size--;
+			}
+			else{
+				System.out.println("Node does not exist");
+			}
+
+		}
+		
+	}
+	
 	// Getters and Accessors
 	public int getSize(){
 		return size;
