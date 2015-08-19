@@ -113,6 +113,10 @@ public class JuliansLinkedList<AnyType> {
 		return size;
 	}
 	
+	public AnyType getFirst(){
+		return head.data;
+	}
+	
 	public Iterator<AnyType> iterator(){
 		return new JuliansListIterator();
 	}
