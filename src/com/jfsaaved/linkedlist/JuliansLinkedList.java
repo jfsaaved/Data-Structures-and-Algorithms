@@ -114,7 +114,24 @@ public class JuliansLinkedList<AnyType> {
 	}
 	
 	public AnyType getFirst(){
+		if(head == null){
+			System.out.println("List is empty");
+		}
 		return head.data;
+	}
+	
+	public AnyType getLast(){
+		if(head == null){
+			System.out.println("List is empty");
+		}
+		
+		Node<AnyType> tmp = head;
+		while(tmp.next != null){
+			tmp = tmp.next;
+		}
+		
+		return tmp.data;
+		
 	}
 	
 	public Iterator<AnyType> iterator(){

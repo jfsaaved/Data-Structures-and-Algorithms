@@ -8,7 +8,23 @@ public class JuliansBinaryTree<AnyType extends Comparable<AnyType>> {
 		root = null;
 	}
 	
+	public void insert(AnyType data){
+		root = insert(root,data);
+	}
 	
+	public Node<AnyType> insert(Node<AnyType> node, AnyType data){
+		
+		if(node == null){
+			node = new Node<AnyType>(data);
+		}
+		else{
+			
+		}
+		
+		
+		return node;
+		
+	}
 	
 	private static class Node<AnyType>{
 		
