@@ -17,13 +17,32 @@ public class JuliansBinaryTree<AnyType extends Comparable<AnyType>> {
 		if(node == null){
 			node = new Node<AnyType>(data);
 		}
+		else if(node.data.compareTo(data) == 0){
+			return node;
+		}
 		else{
-			
+			if(node.data.compareTo(data) > 0){
+				node.left = insert(node.left, data);
+			}else{
+				node.right = insert(node.right, data);
+			}
 		}
 		
 		
 		return node;
 		
+	}
+	
+	public AnyType getRoot(){
+		return root.data;
+	}
+	
+	public AnyType getLeft(){
+		return root.left.data;
+	}
+	
+	public AnyType getRight(){
+		return root.right.data;
 	}
 	
 	private static class Node<AnyType>{

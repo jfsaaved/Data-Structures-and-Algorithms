@@ -1,13 +1,15 @@
 package com.jfsaaved;
 
 import java.util.Iterator;
+
+import com.jfsaaved.binarytree.JuliansBinaryTree;
 import com.jfsaaved.linkedlist.JuliansLinkedList;
 
 public class Main {
 
 	public static void main(String[] args) {
 		
-		System.out.println("Running stuff");
+		/*System.out.println("Running stuff");
 		JuliansLinkedList<Integer> juliansLL = new JuliansLinkedList<Integer>();
 		
 		juliansLL.addFirst(5);
@@ -24,7 +26,15 @@ public class Main {
 		julian_iterator = juliansLL.iterator();
 		System.out.println(julian_iterator.next());
 		System.out.println(julian_iterator.next());
-		System.out.println(julian_iterator.next());
+		System.out.println(julian_iterator.next());*/
+		
+		
+		JuliansBinaryTree<Integer> btree = new JuliansBinaryTree<Integer>();
+		btree.insert(5);
+		btree.insert(4);
+		
+		System.out.println(btree.getRoot());
+		System.out.println(btree.getLeft());
 		
 
 	}
