@@ -13,9 +13,15 @@ public class Main {
 		juliansLL.addFirst(5);
 		juliansLL.addFirst(6);
 		juliansLL.insertAfter(5,7);
-		juliansLL.delete(7);
 		
 		Iterator<Integer> julian_iterator = juliansLL.iterator();
+		System.out.println(julian_iterator.next());
+		System.out.println(julian_iterator.next());
+		System.out.println(julian_iterator.next());
+		
+		
+		juliansLL.reverse();
+		julian_iterator = juliansLL.iterator();
 		System.out.println(julian_iterator.next());
 		System.out.println(julian_iterator.next());
 		System.out.println(julian_iterator.next());

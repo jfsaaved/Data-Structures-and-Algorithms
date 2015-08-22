@@ -134,6 +134,29 @@ public class JuliansLinkedList<AnyType> {
 		
 	}
 	
+	// Setters
+	public void reverse(){
+		if(head.next == null){
+			System.out.println("There is only one element on the list");
+		}
+		
+		else{
+			
+			Node<AnyType> tmp = head;
+			
+			size--;
+			addFirst(tmp.data);
+			head.next = null;
+			
+			while(tmp.next != null){
+				tmp = tmp.next;
+				size--;
+				addFirst(tmp.data);
+			}
+		}
+		
+	}
+	
 	public Iterator<AnyType> iterator(){
 		return new JuliansListIterator();
 	}
