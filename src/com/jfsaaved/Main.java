@@ -32,10 +32,12 @@ public class Main {
 		JuliansBinaryTree<Integer> btree = new JuliansBinaryTree<Integer>();
 		btree.insert(5);
 		btree.insert(4);
+		btree.insert(3);
 		
-		System.out.println(btree.getRoot());
-		System.out.println(btree.getLeft());
-		
+		System.out.println(btree.search(5));
+		System.out.println(btree.search(4));
+		System.out.println(btree.search(3));
+		System.out.println(btree.search(1));
 
 	}
 
