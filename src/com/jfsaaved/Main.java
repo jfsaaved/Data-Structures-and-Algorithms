@@ -38,6 +38,9 @@ public class Main {
 		System.out.println(btree.search(4));
 		System.out.println(btree.search(3));
 		System.out.println(btree.search(1));
+		
+		System.out.println("Size: "+ btree.getSize());
+		btree.preOrder();
 
 	}
 

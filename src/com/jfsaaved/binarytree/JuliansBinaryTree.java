@@ -4,9 +4,11 @@ package com.jfsaaved.binarytree;
 public class JuliansBinaryTree<AnyType extends Comparable<AnyType>> {
 	
 	private Node<AnyType> root;
+	private int size;
 	
 	public JuliansBinaryTree(){
 		root = null;
+		size = 0;
 	}
 	
 	public void insert(AnyType data){
@@ -14,28 +16,22 @@ public class JuliansBinaryTree<AnyType extends Comparable<AnyType>> {
 	}
 	
 	public Node<AnyType> insert(Node<AnyType> node, AnyType data){
-		
 		if(node == null){
 			node = new Node<AnyType>(data);
+			size++;
 		}
-		
 		else if(node.data == data){
 			return node;
 		}
-		
 		else{
-			
 			if(node.data.compareTo(data) > 0){
 				node.left = insert(node.left,data);
 			}
 			else {
 				node.right = insert(node.right,data);
 			}
-			
 		}
-		
 		return node;
-		
 	}
 	
 	
@@ -60,6 +56,21 @@ public class JuliansBinaryTree<AnyType extends Comparable<AnyType>> {
 		}
 	}
 	
+	public void preOrder(){
+		preOrder(root);
+	}
+	
+	public void preOrder(Node<AnyType> node){
+		if(node != null){
+			System.out.print(node.data + " ");
+			preOrder(node.left);
+			preOrder(node.right);
+		}
+	}
+	
+	public int getSize(){
+		return size;
+	}
 	
 	private static class Node<AnyType>{
 		
