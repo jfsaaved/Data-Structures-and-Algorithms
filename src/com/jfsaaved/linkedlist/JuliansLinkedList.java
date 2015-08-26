@@ -157,6 +157,30 @@ public class JuliansLinkedList<AnyType> {
 		
 	}
 	
+	public void reverseRecursion(){
+		if(head == null)
+			System.out.println("There is no element in the list");
+		else
+			reverseRecursion(head);
+	}
+	
+	public void reverseRecursion(Node<AnyType> node){
+		if(node == null)
+				System.out.println("There is no element in the list");
+		else if(node.next == null){
+			head = node;
+			return;
+		}
+		else{
+			reverseRecursion(node.next);
+			
+			Node<AnyType> tmp = node.next;
+			tmp.next = node;
+			node.next = null;
+		}
+				
+	}
+	
 	public Iterator<AnyType> iterator(){
 		return new JuliansListIterator();
 	}

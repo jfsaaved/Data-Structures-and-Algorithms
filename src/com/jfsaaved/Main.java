@@ -9,7 +9,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		/*System.out.println("Running stuff");
+		System.out.println("Running stuff");
 		JuliansLinkedList<Integer> juliansLL = new JuliansLinkedList<Integer>();
 		
 		juliansLL.addFirst(5);
@@ -22,11 +22,11 @@ public class Main {
 		System.out.println(julian_iterator.next());
 		
 		
-		juliansLL.reverse();
+		juliansLL.reverseRecursion();
 		julian_iterator = juliansLL.iterator();
 		System.out.println(julian_iterator.next());
 		System.out.println(julian_iterator.next());
-		System.out.println(julian_iterator.next());*/
+		System.out.println(julian_iterator.next());
 		
 		
 		JuliansBinaryTree<Integer> btree = new JuliansBinaryTree<Integer>();
