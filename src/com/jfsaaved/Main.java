@@ -30,17 +30,22 @@ public class Main {
 		
 		
 		JuliansBinaryTree<Integer> btree = new JuliansBinaryTree<Integer>();
-		btree.insert(5);
+		btree.insert(11);
+		btree.insert(6);
+		btree.insert(8);
+		btree.insert(19);
 		btree.insert(4);
-		btree.insert(3);
+		btree.insert(10);
+		btree.insert(5);
+		btree.insert(17);
+		btree.insert(43);
+		btree.insert(49);
+		btree.insert(31);
 		
-		System.out.println(btree.search(5));
-		System.out.println(btree.search(4));
-		System.out.println(btree.search(3));
-		System.out.println(btree.search(1));
-		
-		System.out.println("Size: "+ btree.getSize());
 		btree.preOrder();
+		System.out.println("");
+		btree.inOrder();
+		
 
 	}
 
