@@ -17,16 +17,17 @@ public class Main {
 		juliansLL.insertAfter(5,7);
 		
 		Iterator<Integer> julian_iterator = juliansLL.iterator();
-		System.out.println(julian_iterator.next());
-		System.out.println(julian_iterator.next());
-		System.out.println(julian_iterator.next());
 		
+		while(julian_iterator.hasNext()){
+			System.out.println(julian_iterator.next());
+		}
 		
 		juliansLL.reverseRecursion();
 		julian_iterator = juliansLL.iterator();
-		System.out.println(julian_iterator.next());
-		System.out.println(julian_iterator.next());
-		System.out.println(julian_iterator.next());
+		
+		while(julian_iterator.hasNext()){
+			System.out.println(julian_iterator.next());
+		}
 		
 		
 		JuliansBinaryTree<Integer> btree = new JuliansBinaryTree<Integer>();
@@ -45,6 +46,8 @@ public class Main {
 		btree.preOrder();
 		System.out.println("");
 		btree.inOrder();
+		System.out.println("");
+		btree.postOrder();
 		
 
 	}

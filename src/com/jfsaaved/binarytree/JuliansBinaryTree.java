@@ -86,6 +86,18 @@ public class JuliansBinaryTree<AnyType extends Comparable<AnyType>> {
 		}
 	}
 	
+	public void postOrder(){
+		postOrder(root);
+	}
+	
+	public void postOrder(Node<AnyType> node){
+		if(node != null){
+			postOrder(node.left);
+			postOrder(node.right);
+			System.out.print(node.data + " ");
+		}
+	}
+	
 	public int getSize(){
 		return size;
 	}
