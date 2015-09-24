@@ -1,4 +1,5 @@
-package com.jfsaaved.practice;
+package com.jfsaaved.doublylinkedlist;
+
 
 public class DLL<AnyType>{
 	
@@ -20,6 +21,24 @@ public class DLL<AnyType>{
 			head.prev = tmp;
 		}
 		head = tmp;
+	}
+	
+	public void addLast(AnyType data){
+		if(head == null){
+			head = new Node<AnyType>(data, null, head);
+			tail = head;
+		}else{
+			Node<AnyType> tmp = head;
+			Node<AnyType> prev = head;
+			
+			while(tmp.next != null && tmp != null){
+				prev = tmp;
+				tmp = tmp.next;
+			}
+			
+			tail = new Node<AnyType>(data, prev, null);
+			tmp.next = tail;
+		}
 	}
 	
 	public void insertBefore(AnyType beforeThis, AnyType data){
@@ -67,9 +86,9 @@ public class DLL<AnyType>{
 		
 		System.out.println("Start");
 		DLL<Integer> test = new DLL<Integer>();
-		test.addFirst(1);
-		test.addFirst(2);
-		test.addFirst(3);
+		test.addLast(2);
+		test.addLast(3);
+		test.addLast(1);
 		
 		System.out.println(test.getHead().getItem());
 		System.out.println(test.getHead().getNext().getItem());
