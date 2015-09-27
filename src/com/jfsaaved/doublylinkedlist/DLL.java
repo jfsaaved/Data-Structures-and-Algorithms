@@ -29,14 +29,11 @@ public class DLL<AnyType>{
 			tail = head;
 		}else{
 			Node<AnyType> tmp = head;
-			Node<AnyType> prev = head;
 			
-			while(tmp.next != null && tmp != null){
-				prev = tmp;
+			while(tmp.next != null)
 				tmp = tmp.next;
-			}
-			
-			tail = new Node<AnyType>(data, prev, null);
+
+			tail = new Node<AnyType>(data, tmp, null);
 			tmp.next = tail;
 		}
 	}
@@ -86,8 +83,8 @@ public class DLL<AnyType>{
 		
 		System.out.println("Start");
 		DLL<Integer> test = new DLL<Integer>();
-		test.addLast(2);
 		test.addLast(3);
+		test.addLast(2);
 		test.addLast(1);
 		
 		System.out.println(test.getHead().getItem());
