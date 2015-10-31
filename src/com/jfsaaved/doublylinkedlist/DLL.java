@@ -7,6 +7,10 @@ public class DLL<AnyType>{
 	private Node<AnyType> tail;
 	
 	public DLL(){
+	/*
+		head = new Node;
+		tail = new Node;
+	*/
 		head = null;
 		tail = null;
 	}
